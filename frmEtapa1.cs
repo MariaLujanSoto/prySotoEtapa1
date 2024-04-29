@@ -104,8 +104,8 @@ namespace prySotoEtapa1
                         Directory.CreateDirectory(carpetaImagenesFirmas);
                     }
 
-                    string nombreArchivo = $"firma_{DateTime.Now.ToString("yyyy-MM-dd-HH,mm,ss")}.png";
-
+                    string nombreArchivo = $"firma_{DateTime.Now.ToString("(yyyy-MM-dd)-(HH,mm,ss)")}.png";
+                    
                     string rutaArchivo = Path.Combine(carpetaImagenesFirmas, nombreArchivo);
 
                     guardarFirma.Save(rutaArchivo, System.Drawing.Imaging.ImageFormat.Png);
